@@ -10,15 +10,13 @@ function obtenerUbicacion() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(position => {
             const { latitude, longitude } = position.coords;
-            map.setView([latitude, longitude], 13);
+            map.setView([latitude, longitude], 16);
             L.marker([latitude, longitude]).addTo(map)
-                .bindPopup('You are here!')
+                .bindPopup('Te encuentras aquí')
                 .openPopup();
         }, () => {
-            alert('Geolocation service failed.');
+            alert('No hemos podido ubicarte.');
         });
-    } else {
-        alert('Geolocation is not supported by this browser.');
     }
 }
 
