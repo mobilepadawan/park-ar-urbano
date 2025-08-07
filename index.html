@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Park-AR Urbano</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script defer src="js/app.js"></script>
+    <link rel="manifest" href="./manifest.json">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/parking-lot-32.png">
+</head>
+
+<body>
+    <header class="header">
+        <h1>
+            Park-AR 🇦🇷
+        </h1>
+    </header>
+    <div id="map" class="map"></div>
+
+    <div class="toolbar">
+        <button id="wallet-button">
+            <img src="assets/icons/wallet.png" class="icon" alt="Billetera">
+            <span class="label">Billetera</span>
+        </button>
+        <button id="profile-button">
+            <img src="assets/icons/user.png" class="icon" alt="Perfil">
+            <span class="label">Perfil</span>
+        </button>
+        <button id="history-button">
+            <img src="assets/icons/history.png" class="icon" alt="Historial">
+            <span class="label">Historial</span>
+        </button>
+        <button id="info-button">
+            <img src="assets/icons/info.png" class="icon" alt="Información">
+            <span class="label">Info</span>
+        </button>
+    </div>
+
+    <dialog id="wallet-dialog">
+        <h2>Billetera</h2>
+        <button class="close-btn">Cerrar</button>
+    </dialog>
+    <dialog id="profile-dialog">
+        <h2>Perfil</h2>
+        <button class="close-btn">Cerrar</button>
+    </dialog>
+    <dialog id="history-dialog">
+        <h2>Historial</h2>
+        <button class="close-btn">Cerrar</button>
+    </dialog>
+    <dialog id="info-dialog">
+        <h2>Información</h2>
+        <button class="close-btn">Cerrar</button>
+    </dialog>
+</body>
+
+</html>

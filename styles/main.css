@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Popins', sans-serif;
+}
+
+.header {
+    /* background: transparent; */
+    background-color: #165e9a;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 16px 0 8px 0;
+    box-shadow: 0 8px 32px 0 rgba(29, 40, 188, 0.37);
+    position: relative;
+    z-index: 1001;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    left: 50%;
+    bottom: 18px;
+    transform: translateX(-50%);
+    gap: 20px;
+    position: fixed;
+    padding: 16px 32px;
+    background: rgba(255, 255, 255, 0.03);
+    /* Más transparente */
+    border-radius: 32px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    z-index: 1000;
+    align-items: center;
+}
+
+.toolbar button {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.toolbar button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.toolbar .icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 4px;
+    object-fit: contain;
+}
+
+.toolbar .label {
+    font-size: 14px;
+    color: #222;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.dialog {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.dialog.active {
+    display: block;
+}
+
+.dialog button.close {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
